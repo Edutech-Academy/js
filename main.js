@@ -157,3 +157,14 @@ let end1 = 10;
 //   console.log('banwoo');
 //   start1++;
 // }
+
+let array1 = [1, 2, 3, 4, 5];
+// for loop, while lo op, for in , for of / log the values
+
+let object = {
+  // for in / log the indexes as well as values
+  a: 1,
+  b: 2,
+  c: 3,
+};
+ 
