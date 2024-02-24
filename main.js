@@ -71,12 +71,12 @@ const arr = [1, 2, 3, 4, 5];
 
 for (let x in arr) {
   // for in -ის დროს x არის ინდექსი
-  console.log(x);
+  // console.log(x);
 }
 
 for (let x of arr) {
   //for of -ის დროს x არის მნიშვნელობა
-  console.log(x);
+  // console.log(x);
 }
 
 let text = undefined;
@@ -167,4 +167,33 @@ let object = {
   b: 2,
   c: 3,
 };
- 
+
+for (let x in object) {
+  // console.log(object[x]);
+}
+
+let newArray = ['gabrieli', 'luka', 'andria', 'dachi'];
+
+let i = 0;
+// while (i < newArray.length) {
+//   console.log(newArray[i]);
+//   i++;
+// }
+
+// for (let i = 0; i < newArray.length; i++) {
+//   console.log(newArray[i]);
+// }
+
+for (let x in newArray) {
+  // console.log(newArray[x]);
+}
+
+// for (let x of newArray) {
+//   console.log(x);
+// }
+
+// let cvladi = [1, 2, 3, 4, 5];
+
+// for (let x = 0; x < cvladi.length; x++) {
+//   console.log(cvladi[x] * 2);
+// }
