@@ -194,6 +194,6 @@ for (let x in newArray) {
 
 // let cvladi = [1, 2, 3, 4, 5];
 
-// for (let x = 0; x < cvladi.length; x++) {
-//   console.log(cvladi[x] * 2);
-// }
+for (let x = 0; x < cvladi.length; x++) {
+  console.log(cvladi[x] * 2);
+}
