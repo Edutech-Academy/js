@@ -1,4 +1,4 @@
-import { savedName, savedAge, savedEmail } from './localStorage.js';
+// import { savedName, savedAge, savedEmail } from './localStorage.js';
 
 // const form = document.querySelector('form');
 // const name = document.querySelector('input[type="text"]');
@@ -34,14 +34,20 @@ const save = document.querySelector('button');
 const clear = document.getElementById('clear');
 const result = document.getElementById('result');
 
-save.addEventListener('click', () => {
+save.addEventListener('dblclick', () => {
   result.innerText =
     name.value + ' -  ' + age.value + ' - ' + email.value;
+  localStorage.setItem('result', result.innerText);
   result.style.marginLeft = '500px';
   localStorage.setItem('name', name.value);
   localStorage.setItem('age', age.value);
   localStorage.setItem('email', email.value);
+  // window.location.href = 'https://youtube.com';
 });
+result.innerText = localStorage.getItem('result');
+const savedName = localStorage.getItem('name');
+const savedEmail = localStorage.getItem('email');
+const savedAge = localStorage.getItem('age');
 
 name.value = savedName;
 
@@ -51,6 +57,7 @@ age.value = savedAge;
 
 clear.addEventListener('click', () => {
   localStorage.clear();
+  // localStorage.removeItem('age');
   result.innerHTML = '';
   name.value = '';
   email.value = '';
@@ -64,7 +71,19 @@ clear.addEventListener('click', () => {
 
   document.body.appendChild(flash_message);
 
-  setTimeout(() => {
-    flash_message.remove();
-  }, 3000);
+  // setTimeout(() => {
+  //   flash_message.remove();
+  // }, 3000);
+
+  setInterval(() => {
+    flash_message.style.opacity = window.getComputedStyle(flash_message).opacity - 0.3;
+  }, 1000);
 });
+
+// const box = document.getElementsByClassName('box')[0];
+
+// const changeBtn = document.getElementById('change');
+
+// changeBtn.addEventListener('click', () => {
+//   box.classList.toggle('box-light');
+// });
